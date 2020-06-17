@@ -1,9 +1,6 @@
-///<reference path="controller/ControllerManager.ts"/>
 import * as PIXI from 'pixi.js'
+import ControllerManager from "./controller/ControllerManager";
 import * as Stats from '../script/Stats.js'
-import {controller} from "./controller/ControllerManager";
-import ControllerManager = controller.ControllerManager;
-
 class Main {
 
     private readonly _controllerManager: ControllerManager;
@@ -41,6 +38,8 @@ class Main {
         this._stats.update();
     }
 }
+
+
 
 window.addEventListener("load", () => {
     new Main();
