@@ -16,6 +16,7 @@ export default class ModelManager extends PIXI.utils.EventEmitter {
 
     constructor(block: SingletonBlock) {
         super();
+        block = null;
     };
 
     public start(): void {
