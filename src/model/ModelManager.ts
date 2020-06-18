@@ -92,7 +92,7 @@ export default class ModelManager extends PIXI.utils.EventEmitter {
     }
     private startComplete():void
     {
-        this.emit("complete")
+        this.emit("complete");
     }
 }
 
