@@ -69,5 +69,17 @@ export class PhotoFrame extends PIXI.Container {
         this.addChild(sprite);
         sprite.anchor.x = 0.5;
         sprite.anchor.y = 0.5;
+
+
+        let container = new PIXI.Container();
+        this.addChild(container)
+        let graphics = new PIXI.Graphics()
+        container.addChild(graphics);
+        graphics.beginFill(0xFF0000);
+        graphics.drawCircle(0,0,80);
+
+        sprite.mask = container;
+
+
     }
 }

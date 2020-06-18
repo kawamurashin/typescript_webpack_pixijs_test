@@ -36,19 +36,17 @@ export class ViewManager extends PIXI.Container{
     {
         const handler = (photoFrame:PhotoFrame) =>
         {
-            console.log("mouse down")
-            console.log(photoFrame)
-            console.log(this._container.children.length)
             this._container.setChildIndex(photoFrame, this._container.children.length - 1);
             //this.setChildIndex(photoFrame,0);
-
-
         }
         const xmlImageDataList:XmlImageData[] = ModelManager.getInstance().xmlImageDataList;
-
         this._photoFrameList = [];
-
         let n:number = xmlImageDataList.length;
+
+        let dx = 1920 / n
+        let dy = 1080 / n
+
+
         for(let i:number = 0;i<n;i++)
         {
             let xmlImageData:XmlImageData =  xmlImageDataList[i];
@@ -56,9 +54,8 @@ export class ViewManager extends PIXI.Container{
             this._container.addChild(photoFrame);
             photoFrame.setXmlImageData(xmlImageData);
 
-            photoFrame.x = 250 + 500* i + 200 - 400* Math.random();
-            photoFrame.y = 540 + 200 - 400* Math.random();
-
+            photoFrame.x = 250 + dx* i;
+            photoFrame.y = 540 + 400 - 800* Math.random();
             photoFrame.on("mouse_down" , handler)
 
             this._photoFrameList.push(photoFrame);
