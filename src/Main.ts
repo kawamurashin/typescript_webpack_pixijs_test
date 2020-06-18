@@ -14,9 +14,14 @@ class Main {
             width: 1920,
             height: 1080,
             backgroundColor: 0x1099bb,
+            antialias:true
         });
+
         let el = document.getElementById('app');
         el.appendChild(app.view);
+
+
+
 
         this._controllerManager = new ControllerManager();
         app.stage.addChild(this._controllerManager);

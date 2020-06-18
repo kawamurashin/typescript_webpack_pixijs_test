@@ -10,7 +10,7 @@ export default class ControllerManager extends PIXI.Container {
     constructor() {
         super();
         const handler = () => {
-            ControllerManager.modelStartComplete();
+            this.modelStartComplete();
         }
 
 
@@ -33,9 +33,10 @@ export default class ControllerManager extends PIXI.Container {
         this._viewManager.enterFrame();
     }
 
-    private static modelStartComplete():void
+    private modelStartComplete():void
     {
-        console.log("controller complete handler")
+        console.log("controller complete handler");
+        this._viewManager.loadComplete();
     }
 
 }

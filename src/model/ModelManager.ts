@@ -1,6 +1,9 @@
 import * as PIXI from 'pixi.js'
 import XmlImageData from "./data/XmlImageData";
 export default class ModelManager extends PIXI.utils.EventEmitter {
+    get xmlImageDataList(): XmlImageData[] {
+        return this._xmlImageDataList;
+    }
 
     private static _instance: ModelManager;
     private _path: string = "data/data.xml";
