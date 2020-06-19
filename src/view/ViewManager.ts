@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js'
 import XmlImageData from "../model/data/XmlImageData";
 import ModelManager from "../model/ModelManager";
 import {PhotoFrame} from "./photos/PhotoFrame";
+import {RippleManager} from "./ripple/RippleManager";
 
 export class ViewManager extends PIXI.Container {
     private readonly _sprite: PIXI.Sprite;
@@ -38,8 +39,22 @@ export class ViewManager extends PIXI.Container {
 
 
         this._line = new PIXI.Graphics();
-        this.addChild(this._line)
+        this.addChild(this._line);
 
+
+
+
+        let rippleManager = new RippleManager();
+        this.addChild(rippleManager);
+        const click = (e) =>
+        {
+            console.log("click " + Math.random())
+            let position:PIXI.Point = e.data.getLocalPosition(this);
+
+            rippleManager.add(position);
+        }
+        this.interactive = true
+        this.on("click" , click);
     }
 
     public loadComplete(): void {

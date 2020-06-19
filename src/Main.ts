@@ -33,9 +33,9 @@ class Main {
 
 
 
-
-
         this._controllerManager = new ControllerManager();
+
+
         app.stage.addChild(this._controllerManager);
 
         const ticker = new PIXI.Ticker();
@@ -88,10 +88,7 @@ class Main {
         //canvasGL.style.left =  x + "px";
         //canvasGL.style.top =  y + "px";
 
-
         this._controllerManager.resize(width, height);
-
-
     }
 }
 

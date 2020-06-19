@@ -3,8 +3,6 @@ import ModelManager from "../model/ModelManager";
 import {ViewManager} from "../view/ViewManager";
 
 export default class ControllerManager extends PIXI.Container {
-
-
     private readonly _viewManager:ViewManager;
 
     constructor() {
@@ -12,19 +10,12 @@ export default class ControllerManager extends PIXI.Container {
         const handler = () => {
             this.modelStartComplete();
         }
-
-
         let modelManager: ModelManager = ModelManager.getInstance();
         modelManager.on("complete", handler);
-
-
         this._viewManager = new ViewManager();
         this.addChild(this._viewManager);
-
         modelManager.start();
-
     }
-
 
     enterFrame() {
         /*
@@ -35,7 +26,6 @@ export default class ControllerManager extends PIXI.Container {
 
     private modelStartComplete():void
     {
-        console.log("controller complete handler");
         this._viewManager.loadComplete();
     }
 

@@ -1,7 +1,6 @@
 ﻿Flash屋さんがTypeScriptとWebpackとPixijsで何ができるかな？
 
 stage mouse click的な<br>
-フルスクリーン的な<br>
 SpriteSheetの読み込みはいかがかな？<br>
 Tweenライブラリーはなにがいいのかな？<br>
 adobe animateとの連携<br>
@@ -13,6 +12,7 @@ namepaceは使いたい。 > どうもだめっぽい<br>
 線は引けるかな？ > 引けた<br>
 ドラックできるかな？　> 行けた。もうちょっと楽にstage.mouseX取れないかしら<br>
 マスクは？ > 普通に行ける<br>
+フルスクリーン的な > スムーズに行ける<br>
 
 ドローコールの確認、デバック方法。
 
@@ -21,6 +21,9 @@ namepaceは使いたい。 > どうもだめっぽい<br>
 
 
 参考<br>
+PIXIJS example
+https://pixijs.io/examples/
+
 最新版TypeScript+webpack 4の環境構築まとめ<br>
 https://ics.media/entry/16329/
 
