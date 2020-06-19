@@ -39,6 +39,9 @@ export default class ControllerManager extends PIXI.Container {
         this._viewManager.loadComplete();
     }
 
+    resize(width: number, height: number) {
+        this._viewManager.resize(width,height);
+    }
 }
 
 

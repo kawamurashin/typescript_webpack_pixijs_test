@@ -1,8 +1,10 @@
 ﻿Flash屋さんがTypeScriptとWebpackとPixijsで何ができるかな？
 
-
-
-マスクは？<br>
+stage mouse click的な<br>
+フルスクリーン的な<br>
+SpriteSheetの読み込みはいかがかな？<br>
+Tweenライブラリーはなにがいいのかな？<br>
+adobe animateとの連携<br>
 
 シングルトンは使いたい。> いける<br>
 namepaceは使いたい。 > どうもだめっぽい<br>
@@ -10,6 +12,7 @@ namepaceは使いたい。 > どうもだめっぽい<br>
 外部ファイルを動的に読み込みたい。 > 行ける。<br>
 線は引けるかな？ > 引けた<br>
 ドラックできるかな？　> 行けた。もうちょっと楽にstage.mouseX取れないかしら<br>
+マスクは？ > 普通に行ける<br>
 
 ドローコールの確認、デバック方法。
 
